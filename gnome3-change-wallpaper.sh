@@ -10,7 +10,7 @@ echo $bus_addresses
 #export ${bus_address} > /dev/null
 
 i=0
-DIR="/home/mwilmott/Pictures/bing-wallpapers"
+DIR=$1
 
 filelist=()
 while read -d $'\0' -r ; do filelist+=("$REPLY"); done < <(find $DIR -type f -iname "*.jpg" -print0 | sort --zero-terminated --random-sort)
